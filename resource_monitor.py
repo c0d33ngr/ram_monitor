@@ -16,7 +16,7 @@ def main():
 	""" Starter function to run the program """
 	
 	mem_available = psutil.virtual_memory().available
-	if mem_available >= THRESHOLD:
+	if mem_available <= THRESHOLD:
 		show_app(APP_NAME, TITLE, MESSAGE)
 		
 		
