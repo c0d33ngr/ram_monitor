@@ -1,6 +1,6 @@
 import psutil, os
 
-THRESHOLD = 700 * 1024 * 1024
+THRESHOLD = 1000 * 1024 * 1024
 
 def main():
 	while True:
