@@ -3,7 +3,7 @@ import psutil, notify2
 THRESHOLD = 1000 * 1024 * 1024
 APP_NAME = "sysmoniker"
 TITLE = "RAM Usage"
-MESSAGE = "RAM usage is too much... Shutdown apps!!!"
+MESSAGE = "RAM usage is too much... Close down some apps!!!"
 
 def show_app(app_name, title, message):
 	notify2.init(app_name)
@@ -12,7 +12,7 @@ def show_app(app_name, title, message):
 	
 def main():
 	mem_available = psutil.virtual_memory().available
-	if mem_available <= THRESHOLD:
+	if mem_available >= THRESHOLD:
 		show_app(APP_NAME, TITLE, MESSAGE)
 		
 		
